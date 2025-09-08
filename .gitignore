@@ -1,0 +1,8 @@
+﻿.terraform/
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
+crash.log
+*.plan
+terraform.tfvars
+fake-az-cli-output.json

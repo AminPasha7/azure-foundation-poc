@@ -1,0 +1,10 @@
+subscription_id    = "910ed080-654d-4049-b637-6d53b903a892"
+tenant_id          = "3757cf14-95b3-43c4-b707-db57d261c228"
+location           = "westeurope"
+rg_name            = "azure-foundation-poc-poc-rg"
+prefix             = "azure-foundation-poc-poc"
+admin_cidrs        = ["175.143.92.178/32"]
+security_email     = "security@example.com"
+security_phone     = "+1-555-0100"
+monthly_budget_usd = 100
+budget_contacts    = ["owner@example.com", "finance@example.com"]

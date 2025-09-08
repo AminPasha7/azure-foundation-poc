@@ -1,0 +1,9 @@
+variable "name_prefix" { type = string }
+variable "region" { type = string }
+variable "subnet_id" { type = string }
+variable "nsg_id" { type = string }
+variable "la_workspace_id" { type = string }
+variable "resource_group_name" { type = string }
+variable "admin_username" { type = string }
+variable "admin_password" { type = string }
+variable "tags" { type = map(string) }
