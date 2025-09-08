@@ -1,15 +1,29 @@
-variable "name" { type = string }
-variable "location" { type = string }
-variable "resource_group_name" { type = string }
-variable "subnet_id" { type = string }
+variable "name" {
+  type = string
+}
+
+variable "location" {
+  type = string
+}
+
+variable "resource_group_name" {
+  type = string
+}
+
+variable "subnet_id" {
+  type = string
+}
+
 variable "admin_ports" {
   type    = list(string)
   default = ["22", "3389"]
 }
+
 variable "admin_cidrs" {
   type    = list(string)
   default = []
 }
+
 variable "tags" {
   type    = map(string)
   default = {}
