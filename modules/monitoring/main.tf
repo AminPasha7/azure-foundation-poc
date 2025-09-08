@@ -24,38 +24,15 @@ resource "azurerm_monitor_diagnostic_setting" "subscription_activity" {
   target_resource_id         = "/subscriptions/${var.subscription_id}"
   log_analytics_workspace_id = var.log_analytics_workspace_id
 
-  enabled_log {
-    category = "Administrative"
-    retention_policy { enabled = false }
-  }
-  enabled_log {
-    category = "Security"
-    retention_policy { enabled = false }
-  }
-  enabled_log {
-    category = "ServiceHealth"
-    retention_policy { enabled = false }
-  }
-  enabled_log {
-    category = "Alert"
-    retention_policy { enabled = false }
-  }
-  enabled_log {
-    category = "Recommendation"
-    retention_policy { enabled = false }
-  }
-  enabled_log {
-    category = "Policy"
-    retention_policy { enabled = false }
-  }
-  enabled_log {
-    category = "Autoscale"
-    retention_policy { enabled = false }
-  }
-  enabled_log {
-    category = "ResourceHealth"
-    retention_policy { enabled = false }
-  }
+  # Retention is managed by the Log Analytics Workspace.
+  enabled_log { category = "Administrative" }
+  enabled_log { category = "Security" }
+  enabled_log { category = "ServiceHealth" }
+  enabled_log { category = "Alert" }
+  enabled_log { category = "Recommendation" }
+  enabled_log { category = "Policy" }
+  enabled_log { category = "Autoscale" }
+  enabled_log { category = "ResourceHealth" }
 }
 
 resource "azurerm_monitor_metric_alert" "vm_cpu" {
